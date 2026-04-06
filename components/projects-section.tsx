@@ -15,8 +15,8 @@ const projects = [
     description:
       "Modern e-commerce solution built with Next.js, Stripe, and Supabase",
     image: "/point-of-sales.png",
-    tech: ["Laravel 12", "MySQL", "blade", "Tailwind CSS"],
-    github: "#",
+    tech: ["Laravel 12", "MySQL", "Blade", "Tailwind CSS"],
+    github: "https://github.com/HanifCahyo/PointOfSales",
     live: "#",
   },
 ];

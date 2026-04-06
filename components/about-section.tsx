@@ -10,17 +10,17 @@ const skills = [
   {
     icon: Zap,
     title: "Backend Development",
-    description: "Node.js, Python, PostgreSQL, MongoDB",
+    description: "Node.js, Laravel, MySQL, MongoDB",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
-    description: "Figma, Adobe XD, Responsive Design",
+    description: "Figma, Davinci Resolve, Responsive Design",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Git, Agile, Team Leadership, Mentoring",
+    description: "Git, Agile, Communication, Teamwork",
   },
 ];
 
@@ -35,7 +35,7 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 font-open-sans text-lg leading-relaxed">
               <p>
-                i&apos;m a passionate full-stack developer with 5+ years of
+                i&apos;m a passionate full-stack developer with 1+ years of
                 experience creating digital solutions that make a difference. I
                 love turning complex problems into simple, beautiful, and
                 intuitive designs.

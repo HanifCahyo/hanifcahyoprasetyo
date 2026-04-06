@@ -44,7 +44,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-open-sans font-medium">Phone</p>
                     <p className="font-open-sans text-muted-foreground">
-                      +62 853-483-112-32
+                      +62 8534-8311-232
                     </p>
                   </div>
                 </div>
