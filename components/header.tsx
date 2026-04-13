@@ -54,8 +54,17 @@ export function Header() {
           </a>
         </div>
 
-        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-bold">
-          Hire Me
+        <Button
+          asChild
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-bold"
+        >
+          <a
+            href="https://www.linkedin.com/in/hanifprasetyo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hire Me
+          </a>
         </Button>
       </nav>
     </header>

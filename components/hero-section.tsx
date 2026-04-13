@@ -33,14 +33,26 @@ export function HeroSection() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-bold px-8"
           >
-            View My Work
+            <a
+              href="https://drive.google.com/file/d/1xRLJBwBAZB1PR7d8vOvV7NZGwIONQ2Jw/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View My Work
+            </a>
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="font-montserrat font-semibold border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
           >
-            Download CV
+            <a
+              href="https://drive.google.com/file/d/12vdbRuswevY6AZR1rb_KMf8pPMlmvMVU/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
+            </a>
           </Button>
         </div>
 

@@ -19,6 +19,24 @@ const projects = [
     github: "https://github.com/HanifCahyo/PointOfSales",
     live: "#",
   },
+  {
+    title: "STI General",
+    description:
+      "Landing page for Sarjana Teknik Informatika Universitas Dian Nuswantoro, built with Next.js and Tailwind CSS",
+    image: "/sti-general.png",
+    tech: ["Next.js", "Tailwind CSS"],
+    github: "#",
+    live: "https://sti.dinus.id/",
+  },
+  {
+    title: "Nidejia",
+    description:
+      "Modern booking platform for travel and accommodation, built with Next.js, Filament, and Laravel 11",
+    image: "/nidejia.png",
+    tech: ["Next.js", "Filament", "Laravel 11"],
+    github: "https://github.com/HanifCahyo/nidejia-prototype",
+    live: "#",
+  },
 ];
 
 export function ProjectsSection() {
@@ -46,6 +64,8 @@ export function ProjectsSection() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
+                    width={1200}
+                    height={675}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

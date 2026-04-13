@@ -1,7 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactSection() {
@@ -18,8 +14,8 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="flex justify-center">
+          <div className="space-y-8 w-full max-w-md">
             <div>
               <h3 className="font-montserrat font-bold text-2xl mb-6">
                 Get in Touch
@@ -63,39 +59,6 @@ export function ContactSection() {
               </div>
             </div>
           </div>
-
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle className="font-montserrat font-bold text-xl">
-                Send a Message
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Input
-                  placeholder="Your Name"
-                  className="bg-input border-border font-open-sans"
-                />
-                <Input
-                  placeholder="Your Email"
-                  type="email"
-                  className="bg-input border-border font-open-sans"
-                />
-              </div>
-              <Input
-                placeholder="Subject"
-                className="bg-input border-border font-open-sans"
-              />
-              <Textarea
-                placeholder="Your Message"
-                rows={5}
-                className="bg-input border-border font-open-sans resize-none"
-              />
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-bold">
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
