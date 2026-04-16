@@ -13,9 +13,9 @@ const projects = [
   {
     title: "Point of Sales",
     description:
-      "Modern e-commerce solution built with Next.js, Stripe, and Supabase",
+      "Modern point of sales system for retail businesses, built with Laravel 12, MySQL, Blade, can print receipts and manage inventory",
     image: "/point-of-sales.png",
-    tech: ["Laravel 12", "MySQL", "Blade", "Tailwind CSS"],
+    tech: ["Laravel 12", "MySQL", "Blade"],
     github: "https://github.com/HanifCahyo/PointOfSales",
     live: "#",
   },
@@ -35,7 +35,7 @@ const projects = [
     image: "/nidejia.png",
     tech: ["Next.js", "Filament", "Laravel 11"],
     github: "https://github.com/HanifCahyo/nidejia-prototype",
-    live: "#",
+    live: "https://nidejia-prototype-gamma.vercel.app/",
   },
 ];
 
@@ -54,62 +54,88 @@ export function ProjectsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card border-border"
-            >
-              <CardHeader className="p-0">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={1200}
-                    height={675}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="font-montserrat font-bold text-xl mb-2">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="font-open-sans text-muted-foreground mb-4">
-                  {project.description}
-                </CardDescription>
+          {projects.map((project, index) => {
+            const hasGithub = project.github && project.github !== "#";
+            const hasLive = project.live && project.live !== "#";
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-accent/20 text-accent-foreground text-sm rounded-full font-open-sans font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+            return (
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card border-border"
+              >
+                <CardHeader className="p-0">
+                  <div className="relative overflow-hidden rounded-t-lg">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      width={1200}
+                      height={675}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <CardTitle className="font-montserrat font-bold text-xl mb-2">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="font-open-sans text-muted-foreground mb-4">
+                    {project.description}
+                  </CardDescription>
 
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 bg-transparent"
-                  >
-                    <Github size={16} className="mr-2" />
-                    Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1 bg-primary hover:bg-primary/90"
-                  >
-                    <ExternalLink size={16} className="mr-2" />
-                    Live
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-accent/20 text-accent-foreground text-sm rounded-full font-open-sans font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {(hasGithub || hasLive) && (
+                    <div className="flex gap-3">
+                      {hasGithub && (
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 bg-transparent"
+                        >
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github size={16} className="mr-2" />
+                            Code
+                          </a>
+                        </Button>
+                      )}
+
+                      {hasLive && (
+                        <Button
+                          asChild
+                          size="sm"
+                          className="flex-1 bg-primary hover:bg-primary/90"
+                        >
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink size={16} className="mr-2" />
+                            Live
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
