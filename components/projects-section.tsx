@@ -17,7 +17,7 @@ const projects = [
     image: "/point-of-sales.png",
     tech: ["Laravel 12", "MySQL", "Blade"],
     github: "https://github.com/HanifCahyo/PointOfSales",
-    live: "#",
+    live: "https://pos.kasir.hanifcahyo.my.id/",
   },
   {
     title: "STI General",
